@@ -1,0 +1,11 @@
+{
+  "name": "class-2",
+  "version": "1.0.0",
+  "description": "class 2 in node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "yugal",
+  "license": "MIT"
+}
