@@ -1,0 +1,28 @@
+{
+    "studands": [
+        {
+            "id": "1",
+            "name": "Yugal Dhiman",
+            "email": "yugaldhiman14@gmail.com",
+            "password": "1234",
+            "course": "MERN FULL STACK",
+            "studantId": "#11"
+        },
+        {
+            "id": "2",
+            "name": "Rajan Kumar",
+            "email": "rajankumar@gmail.com",
+            "password": "12345",
+            "course": "MERN FULL STACK",
+            "studantId": "#132"
+        },
+        {
+            "id": "3",
+            "name": "Manoj Rajput",
+            "email": "manojrajput24@gmail.com",
+            "password": "1234456",
+            "course": "MERN FULL STACK",
+            "studantId": "#114"
+        }
+    ]
+}
