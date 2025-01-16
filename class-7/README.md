@@ -9,7 +9,9 @@ How To Setup JSON Server
 2. create a package
 3. install the json-server package
 4. add code to package
+
    "serve-json": "json-server --watch db.json"
+
    "serve-json": "json-server --watch db.json --port 4000 "
 
 5. run the server
