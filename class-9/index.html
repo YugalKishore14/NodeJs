@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // creating the Date and Time String
+
+      let d = new Date();
+      document.write(`<h3>${d}</h3>`);
+      //   document.write(`<h3>${b.toDateString()}</h3>`); // Display an abbreviated date string
+      document.write(`<h3>${d.toLocaleDateString()}</h3>`); // Display a localizad date string
+      document.write(`<h3>${d.toISOString()}</h3>`); // Display ISO standardized date string
+      document.write(`<h3>${d.toUTCString()}</h3>`); // Display a date string converted to UTC time
+      document.write(`<h3>${d.toString()}</h3>`); // Display the full date string with local time zone
+
+      // Time string
+
+      document.write(`<h3>${d.toTimeString()}</h3>`); // Display the time portion of the date
+      document.write(`<h3>${d.toLocaleTimeString()}</h3>`); // Display a localized time string
+
+      // Getting the year month and date
+
+      document.write(`<h3>${d.getDate()}</h3>`); // display the day of the month
+      document.write(`<h3>${d.getDay()}</h3>`); // display the number of day into the week (0-6)
+      document.write(`<h3>${d.getMonth()}</h3>`); // display the number of months into the year (0-11)
+      document.write(`<h3>${d.getFullYear()}</h3>`); // display the full year (four digits)
+
+      // Getting the hours, minutes, seconds and milliseconds
+
+      document.write(`<h3>${d.getHours()}</h3>`); // display the number of hours into the day (0-23)
+      document.write(`<h3>${d.getMinutes()}</h3>`); // display the number to minutes into hours (0-59)
+      document.write(`<h3>${d.getSeconds()}</h3>`); // display the second into the number (0-59)
+      document.write(`<h3>${d.getMilliseconds()}</h3>`); // display the number of milliseconds into second (0-999)
+      document.write(`<h3>${d.getTime()}</h3>`); // display the number of milliseconds since (1/1/1970)
+      document.write(`<h3>${d.getTimezoneOffset()}</h3>`); // display the time - zone offset (from greenwich mean time) in minutes
+    </script>
+  </body>
+</html>
