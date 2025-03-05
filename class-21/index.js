@@ -8,7 +8,6 @@ app.set('views', './views');
 
 app.get('/', (req, res) => {
     res.render("index");
-    res.send('hello')
 })
 
 app.get('/news', (req, res) => {
