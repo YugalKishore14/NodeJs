@@ -4,16 +4,16 @@ dotEnv.config();
 // Token Middelware
 let mytoken = process.env.MYTOKEN;
 let checkToken = (req, res, next) => {
-    if (req.query.token == ' ' || req.query.token == undefined) {
+    if (req.query.adminName == ' ' || req.query.adminName == undefined) {
         return res.send({
             status: 0,
-            msg: "please fill the token"
+            msg: "please fill the Name"
         })
     }
-    if (req.query.token != mytoken) {
+    if (req.query.adminName != mytoken) {
         return res.send({
             status: 0,
-            msg: "token not match"
+            msg: "Name not match"
         })
     }
     next();
@@ -22,13 +22,13 @@ let checkToken = (req, res, next) => {
 // Password Middelware
 let mypassword = process.env.MYPASSWORD;
 let checkpass = (req, res, next) => {
-    if (req.query.pass == ' ' || req.query.pass == undefined) {
+    if (req.query.password == ' ' || req.query.password == undefined) {
         return res.send({
             status: 0,
             msg: "please fill the password"
         })
     }
-    if (req.query.pass != mypassword) {
+    if (req.query.password != mypassword) {
         return res.send({
             status: 0,
             msg: "password not match"
