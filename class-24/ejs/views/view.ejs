@@ -1,0 +1,62 @@
+<%- include('header') -%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <div class="card">
+        <img src="./image/user.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">User Name</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="/insert">Add Contact</a></li>
+          <li class="list-group-item"><a href="/view">View Contact</a></li>
+          <li class="list-group-item"><a href="/edit">Update Contact</a></li>
+        </ul>
+        <div class="card-body">
+          <hr />
+          <marquee>Welcome to contact app </marquee>
+          <hr />
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <h3>All Contact List</h3>
+      <hr />
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>John</td>
+            <td>Doe</td>
+            <td>@social</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

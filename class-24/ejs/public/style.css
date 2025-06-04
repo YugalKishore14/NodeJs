@@ -1,0 +1,15 @@
+p {
+    text-align: justify;
+}
+
+.carousel-item img {
+    height: 70vh;
+    padding: 0.4%;
+    border: 2px dashed gray;
+
+}
+
+.carousel-item h5 {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* color: tomato; */
+}
