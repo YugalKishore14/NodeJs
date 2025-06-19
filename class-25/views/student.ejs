@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Students</title>
+    <style>
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto;
+      }
+      th,
+      td {
+        border: 1px solid #888;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #333;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">All Students</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>UserName</th>
+          <th>Email</th>
+          <th>Course</th>
+          <th>Mobile</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let i = 0; i < student.length; i++) { %>
+        <tr>
+          <td><%= student[i].userName %></td>
+          <td><%= student[i].email %></td>
+          <td><%= student[i].course %></td>
+          <td><%= student[i].mobile %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,18 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
-const User = require('./models/user_models');
-
+const Student = require('./models/student_models');
+const studentRouter = require('./router/studentRouter');
 const app = express();
 const port = 3000;
-
-
 app.use(express.urlencoded({ extended: true }));
+
 
 // Middleware
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api', studentRouter);
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/ejs_insert', {
@@ -24,17 +24,8 @@ mongoose.connect('mongodb://localhost:27017/ejs_insert', {
     console.log("MongoDB Connection Error:", err);
 });
 
-// Routes
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
 
-app.get('/insert', (req, res) => {
-    res.render('insert');
-});
-
-
-// app.post('/insert', async (req, res) => {
+// app.post('/api/insert', async (req, res) => {
 //     try {
 //         const { email, name, password, course, mobile } = req.body;
 //         const newUser = new User({
@@ -51,10 +42,30 @@ app.get('/insert', (req, res) => {
 //         res.status(500).send('Error inserting user');
 //     }
 // });
-app.post('/insert', async (req, res) => {
-    await User.create(req.body)
-    res.redirect('/insert');
+app.post('/api/insert', async (req, res) => {
+    await Student.create(req.body)
+    res.redirect('/api/student');
 })
+
+
+
+// Routes
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+app.get('/api/insert', (req, res) => {
+    res.render('insert');
+});
+
+app.get('/api/student', async (req, res) => {
+    try {
+        const student = await Student.find();
+        res.render('student', { student });
+    } catch (err) {
+        console.error("Error fetching users:", err);
+        res.status(500).send("Something went wrong!");
+    }
+});
 
 
 // Server Start
