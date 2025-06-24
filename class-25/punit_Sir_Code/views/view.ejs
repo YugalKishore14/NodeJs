@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <table border="1" width="80%" align="center">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>email</th>
+          <th>mobile</th>
+          <th>Single View</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(user=>{ %>
+        <tr>
+          <td><%= user.userName %></td>
+          <td><%= user.userEmail %></td>
+          <td><%= user.userMobile %></td>
+          <td><a href="/view/<%= user._id %>">View </a></td>
+          <td><a href="/edit/<%= user._id %>">Edit </a></td>
+          <td><a href="/delete/<%= user._id %>">Delete </a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>
