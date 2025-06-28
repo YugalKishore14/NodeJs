@@ -1,0 +1,25 @@
+<%- include('head') -%>
+
+  <h1>All Contacts</h1>
+  <a href="/" class="back-btn">← Back</a>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(user => { %>
+        <tr>
+          <td data-label="Name"><%= user.userName %></td>
+          <td data-label="Email"><%= user.userEmail %></td>
+          <td data-label="Mobile"><%= user.userMobile %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

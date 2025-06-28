@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm Delete</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+        color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: #4caf50;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px 5px 0 0;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .btn-delete {
+        background-color: #e53935;
+        color: white;
+      }
+
+      .btn-delete:hover {
+        background-color: #c62828;
+      }
+
+      .btn-cancel {
+        background-color: #9e9e9e;
+        color: white;
+      }
+
+      .btn-cancel:hover {
+        background-color: #757575;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/view">Back</a>
+
+    <form method="post">
+      <a href="/delete/<%= users._id %>/confirm" class="btn btn-delete"
+        >Yes, Delete</a
+      >
+      <a href="/view" class="btn btn-cancel">Cancel</a>
+    </form>
+  </body>
+</html>

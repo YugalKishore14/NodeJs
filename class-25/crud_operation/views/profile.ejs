@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
+
+      a {
+        display: inline-block;
+        margin: 20px;
+        text-decoration: none;
+        color: #4caf50;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .card {
+        width: 90%;
+        max-width: 500px;
+        margin: 10vh auto;
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .card h1 {
+        margin: 10px 0;
+        font-size: 1.4rem;
+        color: #333;
+      }
+
+      @media (max-width: 600px) {
+        .card {
+          width: 95%;
+          padding: 20px;
+        }
+
+        .card h1 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="/view">← Back</a>
+
+    <div class="card">
+      <h1><%= users.userName %></h1>
+      <h1><%= users.userEmail %></h1>
+      <h1><%= users.userMobile %></h1>
+    </div>
+  </body>
+</html>

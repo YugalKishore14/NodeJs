@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Contact</title>
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 4px;
+        transition: background-color 0.2s ease;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a.back-btn {
+        display: inline-block;
+        margin-bottom: 20px;
+        background-color: #e0e0e0;
+        color: #000;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      thead {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      tbody tr:hover {
+        background-color: #f9f9f9;
+      }
+
+      .btn-view {
+        background-color: #2196f3;
+        color: white;
+      }
+
+      .btn-edit {
+        background-color: #ff9800;
+        color: white;
+      }
+
+      .btn-delete {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .btn-view:hover {
+        background-color: #1976d2;
+      }
+
+      .btn-edit:hover {
+        background-color: #fb8c00;
+      }
+
+      .btn-delete:hover {
+        background-color: #e53935;
+      }
+
+      @media (max-width: 600px) {
+        th,
+        td {
+          font-size: 14px;
+          padding: 10px;
+        }
+
+        h1 {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>All Contacts</h1>
+    <a href="/" class="back-btn">← Back</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>View</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(user => { %>
+        <tr>
+          <td><%= user.userName %></td>
+          <td><%= user.userEmail %></td>
+          <td><%= user.userMobile %></td>
+          <td><a href="/view/<%= user._id %>" class="btn-view">View</a></td>
+          <td><a href="/update/<%= user._id %>" class="btn-edit">Edit</a></td>
+          <td>
+            <a href="/delete/<%= user._id %>" class="btn-delete">Delete</a>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>

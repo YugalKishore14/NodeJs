@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Contact</title>
+    <style>
+      /* Reset & Base Styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      form {
+        background-color: whitesmoke;
+        padding: 30px;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="submit"] {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .back-link {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: #4caf50;
+        font-weight: bold;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 500px) {
+        form {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <form method="post">
+      <a href="/" class="back-link">← Back</a>
+      <h2>Add New Contact</h2>
+      <input
+        type="text"
+        name="userName"
+        placeholder="Enter Your Name"
+        required
+      />
+      <!-- <img src="" alt=""> -->
+      <input
+        type="email"
+        name="userEmail"
+        placeholder="Enter Your Email"
+        required
+      />
+      <input
+        type="text"
+        name="userMobile"
+        placeholder="Enter Your Mobile"
+        required
+      />
+      <input type="submit" name="insert" value="Insert Data" />
+    </form>
+  </body>
+</html>
